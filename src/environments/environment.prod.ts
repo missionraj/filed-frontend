@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiString:'https://creditcard-details.herokuapp.com'
 };

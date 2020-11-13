@@ -1,0 +1,23 @@
+.home__container { 
+  display: grid;
+  place-items: center;
+}
+
+img {
+  height: 300px;
+  width: 300px;
+  object-fit: contain;
+}
+
+.home__welcome{
+  width: 169px;
+  height: 42px;
+  border-radius: 23px;
+  box-shadow: 0 5px 10px 0 rgba(239, 61, 85, 0.4);
+  background-color: #ef3d55;
+  text-align: center;
+  border-style: none;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+}

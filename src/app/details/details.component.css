@@ -1,0 +1,4 @@
+.details__container{
+    display: grid;
+    place-items: center;
+}

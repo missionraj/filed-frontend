@@ -1,0 +1,53 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+
+    <div class="input-wrapper"> 
+      <label> credit card number </label>
+      <input type="text" formControlName="creditCardNumber"  placeholder="please enter credit card number">
+      <div  *ngIf="submitted && f.creditCardNumber.errors" > 
+        <p *ngIf="f.creditCardNumber.errors.required" class="error-text">
+          Oops, please provide a creditcardnumber! 
+        </p>
+      </div>
+    </div>
+    <div class="input-wrapper">
+      <label> card holder </label>
+      <input type="text" formControlName="cardHolder" placeholder="credit card holder name">
+      <div  *ngIf="submitted && f.cardHolder.errors" > 
+        <p *ngIf="f.cardHolder.errors.required" class="error-text">
+          Oops, please provide a credit holder name
+        </p>
+      </div>
+    </div>
+    <div class="input-wrapper">
+      <label> expiry date </label>
+      <input type="date" id="date" formControlName="expirationDate" placeholder="expiry date" >
+      <div  *ngIf="submitted && f.expirationDate.errors" > 
+        <p *ngIf="f.expirationDate.errors.required" class="error-text">
+          Oops, please provide a expiry date
+        </p>
+        <p *ngIf="f.expirationDate.errors.validdate" class="error-text">
+          please provide valid date ....
+        </p>
+      </div>
+    </div>
+    <div class="input-wrapper">
+      <label > security code </label>
+      <input type="text" formControlName="securityCode" placeholder="security code">
+    </div>
+    <div class="input-wrapper">
+      <label > amount </label>
+      <input type="number" formControlName="amount" placeholder="please enter amount">
+      <div  *ngIf="submitted && f.amount.errors" > 
+        <p *ngIf="f.amount.errors.required" class="error-text">
+            Oops, please enter amount
+        </p>
+        <p *ngIf="f.amount.errors.amount" class="error-text">
+          amount must be greater than zero ...
+      </p>
+      </div>
+    </div>
+
+    <button type="submit" >
+      Send
+    </button>
+</form>
